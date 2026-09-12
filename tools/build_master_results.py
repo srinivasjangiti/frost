@@ -110,7 +110,7 @@ def build_master_results():
 
     master = {
         "meta": {
-            "project": "cold-start-algorithm",
+            "project": "frost",
             "dataset": dataset_str,
             "n_runs": len(runs)
         },

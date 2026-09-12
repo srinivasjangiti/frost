@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "cold-start-algorithm"
+title: "FROST: Few-shot & Cold-start Recommendation with Objective-balanced Serendipity & Trade-offs"
 version: 1.0.0
 date-released: 2026-02-25
-url: "https://github.com/nikita-zmanovskiy/cold-start-algorithm"
+url: "https://github.com/srinivasjangiti/frost"
 
 authors:
   - family-names: "Lemdiasova"
@@ -14,7 +14,7 @@ authors:
 
 preferred-citation:
   type: article
-  title: "cold-start-algorithm"
+  title: "FROST: Few-shot & Cold-start Recommendation with Objective-balanced Serendipity & Trade-offs"
   authors:
     - family-names: "Lemdiasova"
       given-names: "Ekaterina"

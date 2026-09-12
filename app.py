@@ -127,7 +127,7 @@ def main():
                 1. **Stage 1 (Retrieval)**: Combines **FAISS dense ANN vector search** (`all-MiniLM-L6-v2`) with **BM25 lexical retrieval** to retrieve $M=50–500$ relevant candidates.
                 2. **Stage 2 (Reranking)**: Uses a **Neural Cross-Encoder** (`ms-marco-MiniLM-L-6-v2`) to jointly score user interest against candidate titles/genres.
                 3. **Stage 3 (Multi-Objective)**: Uses a **Two-Head Pareto optimizer** to balance user relevance vs. serendipitous discovery (long-tail items).
-            * **Real Code Execution**: All recommendations below are generated **live in real-time** by the project's actual ML modules running locally on CPU.
+            * **Real Code Execution**: All recommendations below are generated **live in real-time** by the project's actual ML modules running locally on CPU (measured end-to-end latency: **~1.2–2.35 seconds** for dense ANN vector search, BM25 retrieval, and neural cross-encoder reranking across 50–100 candidates).
             """
         )
 

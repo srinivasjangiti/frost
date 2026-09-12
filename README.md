@@ -10,8 +10,10 @@
 [![FAISS](https://img.shields.io/badge/FAISS-Dense%20Vector%20Search-green.svg)](https://github.com/facebookresearch/faiss)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18772321.svg)](https://doi.org/10.5281/zenodo.18772321)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.txt)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](app.py)
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+[Live Demo](#-interactive-live-demo-recruiter-showcase) •
 [Overview](#-overview) •
 [Architecture](#-system-architecture) •
 [Key Features](#-key-features) •
@@ -24,6 +26,33 @@
 ---
 
 </div>
+
+## 🖥️ Interactive Live Demo (Recruiter Showcase)
+
+FROST includes an out-of-the-box **interactive Streamlit demonstration** (`app.py`) built directly on top of the production ML inference modules. Recruiters and engineers can test real recommendations in real-time across cold-start scenarios.
+
+```bash
+# Run locally with one command:
+streamlit run app.py
+```
+
+### 🌟 What the Demo Showcases:
+* **Cold-Start Scenarios**: Switch between **Pure Cold-Start (0 items)**, **Few-Shot (1 item)**, and **Few-Shot (5 items)** to see how sparse user signals translate into semantic profiles.
+* **Retrieval Engine Switching**: Toggle between **Hybrid (Dense FAISS + BM25)**, Pure ANN Vector Search, BM25 Lexical, and Popularity baselines.
+* **Neural Reranking Toggle**: Enable/disable the HuggingFace Cross-Encoder (`ms-marco-MiniLM-L-6-v2`) in Stage 2.
+* **Multi-Objective Pareto Slider ($\alpha$)**: Adjust the trade-off between user relevance ($\alpha=1.0$) and serendipitous long-tail discovery ($\alpha=0.0$).
+* **Real Metrics**: Live latency (ms), Intra-List Diversity (ILD), and Average Novelty calculated for every recommendation list.
+
+### ☁️ Cloud Deployment Guide:
+* **Streamlit Community Cloud**:
+  1. Fork or push to your GitHub repo (`https://github.com/<your-user>/frost`).
+  2. Visit [share.streamlit.io](https://share.streamlit.io) and click **New App**.
+  3. Select your repository, set Main file path to `app.py`, and click **Deploy**.
+  4. The lightweight demo catalog (< 3 MB) initializes automatically in ~15 seconds on free CPU instances (RAM footprint < 450 MB).
+* **Hugging Face Spaces**:
+  - Create a new Space with the **Streamlit SDK**, push this repository, and it boots immediately.
+
+---
 
 ## 📖 Overview
 
